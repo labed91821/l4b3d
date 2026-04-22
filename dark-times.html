@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta name="description" content="l4b3d — Dark Times. Internal conflict logs.">
   <title>l4b3d // DARK TIMES</title>
   
@@ -12,143 +12,154 @@
   
   <link rel="icon" type="image/jpeg" href="assets/gallery/i3.jpg">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body class="dark-page">
   <div class="noise-overlay"></div>
   <div class="background-layer dark-bg"></div>
   <div class="curtain"></div>
 
-  <aside class="side-panel collapsed">
-    <button class="toggle-btn" aria-label="Toggle navigation">☰</button>
-    <a href="index.html" class="site-title">l4b3d</a>
-    <nav>
+  <aside class="side-panel collapsed" id="sidePanel">
+    <button class="toggle-btn" id="toggleBtn" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="site-title" aria-label="l4b3d home">l4b3d</a>
+    <nav role="navigation">
       <a href="the-story.html">
-        <img src="assets/gallery/icon-story.png" class="nav-icon story-icon" alt="Story">
+        <img src="assets/gallery/icon-story.png" class="nav-icon story-icon" alt="" aria-hidden="true">
         <span class="nav-label">The Story</span>
       </a>
       <a href="dark-times.html">
-        <img src="assets/gallery/icon-dark-times.png" class="nav-icon dark-icon" alt="Dark Times">
+        <img src="assets/gallery/icon-dark-times.png" class="nav-icon dark-icon" alt="" aria-hidden="true">
         <span class="nav-label">Dark Times</span>
       </a>
       <a href="the-other-side.html">
-        <img src="assets/gallery/icon-other-side.png" class="nav-icon other-icon" alt="Other Side">
+        <img src="assets/gallery/icon-other-side.png" class="nav-icon other-icon" alt="" aria-hidden="true">
         <span class="nav-label">The Other Side</span>
       </a>
       <a href="the-river.html">
-        <img src="assets/gallery/icon-river.png" class="nav-icon river-icon" alt="River">
+        <img src="assets/gallery/icon-river.png" class="nav-icon river-icon" alt="" aria-hidden="true">
         <span class="nav-label">The River</span>
       </a>
     </nav>
   </aside>
 
-  <img src="assets/gallery/i3.jpg" class="logo-float" onclick="goHome()" alt="l4b3d logo">
+  <button class="logo-float" onclick="goHome()" aria-label="Return home">
+    <img src="assets/gallery/i3.jpg" alt="l4b3d logo">
+  </button>
 
   <main class="content-wrapper">
-    <div class="neon-box dark fade-in">
-      <h1 class="glitch-text" data-text="THE_SHADOW">THE_SHADOW</h1>
-      <p class="subtitle-text red-text">> INTERNAL_CONFLICT_LOGS</p>
-    </div>
-
-    <div class="dark-intro fade-in delay-1">
-      <p class="dark-quote">"Every collapse is a chapter. Every shadow teaches."</p>
-    </div>
-
-    <div class="timeline-wrapper fade-in delay-2">
+    <div class="page-container">
       
-      <div class="era-block">
-        <div class="era-header" style="background-image: url('assets/gallery/4.jpg');">
-          <div class="era-title">THE COLLAPSE</div>
-          <div class="era-date">DECEMBER 2024</div>
-        </div>
-        <div class="era-content">
-          <div class="timeline-item">
-            <h3 class="timeline-title">CRITICAL FAILURE</h3>
-            <div class="timeline-meta">DEC.24 // SYSTEM FROZEN</div>
-            <p class="timeline-text">
-              The moment when everything you built crashes. Not gradually. Instantly.
-            </p>
-            <p class="timeline-text">
-              Assets lost. Safety revealed as illusion. The screen goes black and you realize: nothing was ever permanent.
-            </p>
-            <p class="timeline-text">
-              But in the darkness, something else awakens. The understanding that you were never the machine — you're the one who rebuilds it.
-            </p>
-          </div>
-        </div>
+      <header class="page-header fade-in">
+        <h1 class="glitch-text page-title" data-text="THE_SHADOW">THE_SHADOW</h1>
+        <p class="subtitle-text red-text">> INTERNAL_CONFLICT_LOGS</p>
+      </header>
+
+      <div class="dark-intro fade-in delay-1">
+        <p class="dark-quote">"Every collapse is a chapter. Every shadow teaches."</p>
       </div>
 
-      <div class="era-block">
-        <div class="era-header" style="background-image: url('assets/gallery/54.jpg');">
-          <div class="era-title">THE REBOOT</div>
-          <div class="era-date">JANUARY 2025</div>
-        </div>
-        <div class="era-content">
-          <div class="timeline-item">
-            <h3 class="timeline-title">HARDWARE LIMIT</h3>
-            <div class="timeline-meta">JAN.25 // 4GB RAM</div>
-            <p class="timeline-text">
-              Rebuilding on scraps. Learning that constraint breeds creativity.
-            </p>
-            <p class="timeline-text">
-              You don't need the best tools. You need hunger. You need the refusal to stop.
-            </p>
-            <p class="timeline-text">
-              Optimization beats raw power. Intelligence beats brute force. The system is lean now. Efficient. Dangerous.
-            </p>
+      <div class="timeline-wrapper fade-in delay-2">
+        
+        <article class="era-block">
+          <div class="era-header" style="background-image: url('assets/gallery/4.jpg');">
+            <div class="era-info">
+              <h2 class="era-title">THE COLLAPSE</h2>
+              <span class="era-date">DECEMBER 2024</span>
+            </div>
           </div>
-        </div>
+          <div class="era-content">
+            <div class="timeline-item">
+              <h3 class="timeline-title">CRITICAL FAILURE</h3>
+              <div class="timeline-meta">DEC.24 // SYSTEM FROZEN</div>
+              <p class="timeline-text">
+                The moment when everything you built crashes. Not gradually. Instantly.
+              </p>
+              <p class="timeline-text">
+                Assets lost. Safety revealed as illusion. The screen goes black and you realize: nothing was ever permanent.
+              </p>
+              <p class="timeline-text">
+                But in the darkness, something else awakens. The understanding that you were never the machine — you're the one who rebuilds it.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="era-block">
+          <div class="era-header" style="background-image: url('assets/gallery/54.jpg');">
+            <div class="era-info">
+              <h2 class="era-title">THE REBOOT</h2>
+              <span class="era-date">JANUARY 2025</span>
+            </div>
+          </div>
+          <div class="era-content">
+            <div class="timeline-item">
+              <h3 class="timeline-title">HARDWARE LIMIT</h3>
+              <div class="timeline-meta">JAN.25 // 4GB RAM</div>
+              <p class="timeline-text">
+                Rebuilding on scraps. Learning that constraint breeds creativity.
+              </p>
+              <p class="timeline-text">
+                You don't need the best tools. You need hunger. You need the refusal to stop.
+              </p>
+              <p class="timeline-text">
+                Optimization beats raw power. Intelligence beats brute force. The system is lean now. Efficient. Dangerous.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="era-block">
+          <div class="era-header" style="background-image: linear-gradient(135deg, #1a0a0a 0%, #000 100%);">
+            <div class="era-info">
+              <h2 class="era-title">THE SHADOW ERA</h2>
+              <span class="era-date">ONGOING</span>
+            </div>
+          </div>
+          <div class="era-content">
+            <div class="timeline-item">
+              <h3 class="timeline-title">TRANSFORMATION PROTOCOL</h3>
+              <div class="timeline-meta">PRESENT // STATUS: EVOLVING</div>
+              <p class="timeline-text">
+                Still walking through the dark. But now, the shadows are allies.
+              </p>
+              <p class="timeline-text">
+                Every setback is data. Every failure is feedback. The river flows darker here, but it flows forward.
+              </p>
+              <p class="timeline-text breathing-text">
+                This is not survival. This is becoming.
+              </p>
+            </div>
+          </div>
+        </article>
+
       </div>
 
-      <div class="era-block">
-        <div class="era-header" style="background-image: linear-gradient(135deg, #1a0a0a 0%, #000 100%);">
-          <div class="era-title">THE SHADOW ERA</div>
-          <div class="era-date">ONGOING</div>
-        </div>
-        <div class="era-content">
-          <div class="timeline-item">
-            <h3 class="timeline-title">TRANSFORMATION PROTOCOL</h3>
-            <div class="timeline-meta">PRESENT // STATUS: EVOLVING</div>
-            <p class="timeline-text">
-              Still walking through the dark. But now, the shadows are allies.
-            </p>
-            <p class="timeline-text">
-              Every setback is data. Every failure is feedback. The river flows darker here, but it flows forward.
-            </p>
-            <p class="timeline-text breathing-text">
-              This is not survival. This is becoming.
-            </p>
+      <section class="lessons-section fade-in delay-3">
+        <h2 class="section-title">// FRAGMENTS FROM THE VOID</h2>
+        <div class="lessons-grid">
+          <div class="lesson-card">
+            <p>"Collapse is not the end. It's the reset."</p>
+          </div>
+          <div class="lesson-card">
+            <p>"In limitation, find liberation."</p>
+          </div>
+          <div class="lesson-card">
+            <p>"The shadow knows what the light forgot."</p>
           </div>
         </div>
-      </div>
+      </section>
+
+      <footer class="page-footer fade-in delay-4">
+        <p class="footer-whisper">The darkness is not empty. It's full of beginnings.</p>
+        <div class="social-link">
+          <a href="https://instagram.com/labed_0" target="_blank" rel="noopener noreferrer">
+            Walk with me → @labed_0
+          </a>
+        </div>
+      </footer>
 
     </div>
-
-    <div class="lessons-section fade-in delay-3">
-      <h2 class="section-title">// FRAGMENTS FROM THE VOID</h2>
-      <div class="lessons-grid">
-        <div class="lesson-card">
-          <p>"Collapse is not the end. It's the reset."</p>
-        </div>
-        <div class="lesson-card">
-          <p>"In limitation, find liberation."</p>
-        </div>
-        <div class="lesson-card">
-          <p>"The shadow knows what the light forgot."</p>
-        </div>
-      </div>
-    </div>
-
-    <footer class="page-footer fade-in delay-4">
-      <p class="footer-whisper">The darkness is not empty. It's full of beginnings.</p>
-      <div class="social-link">
-        <a href="https://instagram.com/labed_0" target="_blank" rel="noopener">
-          Walk with me → @labed_0
-        </a>
-      </div>
-    </footer>
-
   </main>
 </body>
 </html>
