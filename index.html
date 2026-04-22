@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="l4b3d — a digital sanctuary for those who feel everything too deeply.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="l4b3d — A neon-lit memory river. A digital sanctuary for those who feel everything too deeply.">
   <meta name="theme-color" content="#050505">
-  <title>l4b3d // enter the river</title>
+  <title>l4b3d // ENTER THE RIVER</title>
   
+  <!-- Preload critical assets -->
   <link rel="preload" href="assets/gallery/i3.jpg" as="image">
   <link rel="preload" href="assets/gallery/f1.jpg" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,104 +15,125 @@
   
   <link rel="icon" type="image/jpeg" href="assets/gallery/i3.jpg">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body class="home-page">
+  <!-- Atmospheric layers -->
   <div class="noise-overlay"></div>
   <div class="background-layer"></div>
   <div class="particles-canvas" id="particlesCanvas"></div>
   <div class="curtain"></div>
 
-  <aside class="side-panel collapsed">
-    <button class="toggle-btn" aria-label="Toggle navigation">☰</button>
-    <a href="index.html" class="site-title">l4b3d</a>
-    <nav>
+  <!-- Mobile-optimized sidebar -->
+  <aside class="side-panel collapsed" id="sidePanel">
+    <button class="toggle-btn" id="toggleBtn" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="site-title" aria-label="l4b3d home">l4b3d</a>
+    <nav role="navigation">
       <a href="the-story.html">
-        <img src="assets/gallery/icon-story.png" class="nav-icon story-icon" alt="Story">
+        <img src="assets/gallery/icon-story.png" class="nav-icon story-icon" alt="" aria-hidden="true">
         <span class="nav-label">The Story</span>
       </a>
       <a href="dark-times.html">
-        <img src="assets/gallery/icon-dark-times.png" class="nav-icon dark-icon" alt="Dark Times">
+        <img src="assets/gallery/icon-dark-times.png" class="nav-icon dark-icon" alt="" aria-hidden="true">
         <span class="nav-label">Dark Times</span>
       </a>
       <a href="the-other-side.html">
-        <img src="assets/gallery/icon-other-side.png" class="nav-icon other-icon" alt="Other Side">
+        <img src="assets/gallery/icon-other-side.png" class="nav-icon other-icon" alt="" aria-hidden="true">
         <span class="nav-label">The Other Side</span>
       </a>
       <a href="the-river.html">
-        <img src="assets/gallery/icon-river.png" class="nav-icon river-icon" alt="River">
+        <img src="assets/gallery/icon-river.png" class="nav-icon river-icon" alt="" aria-hidden="true">
         <span class="nav-label">The River</span>
       </a>
     </nav>
   </aside>
 
-  <img src="assets/gallery/i3.jpg" class="logo-float" onclick="goHome()" alt="l4b3d logo">
+  <!-- Floating logo -->
+  <button class="logo-float" onclick="goHome()" aria-label="Return home">
+    <img src="assets/gallery/i3.jpg" alt="l4b3d logo">
+  </button>
 
+  <!-- Main content -->
   <main class="content-wrapper hero-wrapper">
-    
-    <div class="hero-center">
-      <div class="neon-box hero-box fade-in">
-        <h1 class="glitch-text hero-title" data-text="l4b3d_UNIVERSE">l4b3d_UNIVERSE</h1>
-        <p class="hero-subtitle">EST. 2025 // MEMORY ARCHIVE</p>
-      </div>
+    <div class="hero-container">
+      
+      <!-- Hero section -->
+      <section class="hero-center">
+        <div class="hero-box fade-in">
+          <h1 class="glitch-text hero-title" data-text="l4b3d_UNIVERSE">l4b3d_UNIVERSE</h1>
+          <p class="hero-subtitle">EST. 2025 // MEMORY ARCHIVE</p>
+        </div>
 
-      <div class="hero-description fade-in delay-1">
-        <p class="typing-text">This is not a portfolio. It is a neon-lit memory river.</p>
-        <p class="typing-text delay-type-1">A digital sanctuary built from light and sound.</p>
-        <p class="typing-text delay-type-2">For those who feel everything too deeply.</p>
-      </div>
+        <div class="hero-description fade-in delay-1">
+          <p class="hero-text">This is not a portfolio. It is a neon-lit memory river.</p>
+          <p class="hero-text">A digital sanctuary built from light and sound.</p>
+          <p class="hero-text">For those who feel everything too deeply.</p>
+        </div>
 
-      <div class="hero-cta fade-in delay-2">
-        <a href="the-river.html" class="enter-button">
-          <span class="button-text">ENTER THE RIVER</span>
-          <span class="button-glow"></span>
-        </a>
-      </div>
+        <div class="hero-cta fade-in delay-2">
+          <a href="the-river.html" class="enter-button">
+            <span class="button-text">ENTER THE RIVER</span>
+            <span class="button-glow"></span>
+          </a>
+        </div>
 
-      <div class="scroll-indicator fade-in delay-3">
-        <div class="scroll-icon"></div>
-        <span>EXPLORE BELOW</span>
-      </div>
+        <div class="scroll-indicator fade-in delay-3">
+          <div class="scroll-icon"></div>
+          <span class="scroll-text">EXPLORE BELOW</span>
+        </div>
+      </section>
+
+      <!-- Preview cards -->
+      <section class="preview-section fade-in delay-3">
+        <div class="preview-grid">
+          
+          <a href="the-story.html" class="preview-card story-preview">
+            <div class="preview-overlay"></div>
+            <div class="preview-content">
+              <h2 class="preview-title">THE STORY</h2>
+              <p class="preview-text">Origins. Mythology. Purpose.</p>
+            </div>
+          </a>
+          
+          <a href="dark-times.html" class="preview-card dark-preview">
+            <div class="preview-overlay"></div>
+            <div class="preview-content">
+              <h2 class="preview-title">DARK TIMES</h2>
+              <p class="preview-text">Shadows. Collapse. Rebirth.</p>
+            </div>
+          </a>
+          
+          <a href="the-other-side.html" class="preview-card other-preview">
+            <div class="preview-overlay"></div>
+            <div class="preview-content">
+              <h2 class="preview-title">FRAGMENTS</h2>
+              <p class="preview-text">Unstructured. Raw. Honest.</p>
+            </div>
+          </a>
+          
+          <a href="the-river.html" class="preview-card river-preview">
+            <div class="preview-overlay"></div>
+            <div class="preview-content">
+              <h2 class="preview-title">THE RIVER</h2>
+              <p class="preview-text">Music. Visuals. Emotion.</p>
+            </div>
+          </a>
+          
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="home-footer fade-in delay-4">
+        <p class="footer-quote">"Walking alone at night with headphones on"</p>
+        <div class="social-link">
+          <a href="https://instagram.com/labed_0" target="_blank" rel="noopener noreferrer">
+            @labed_0
+          </a>
+        </div>
+      </footer>
+
     </div>
-
-    <section class="preview-section fade-in delay-3">
-      <div class="preview-grid">
-        <a href="the-story.html" class="preview-card story-preview">
-          <div class="preview-overlay"></div>
-          <h3>THE STORY</h3>
-          <p>Origins. Mythology. Purpose.</p>
-        </a>
-        
-        <a href="dark-times.html" class="preview-card dark-preview">
-          <div class="preview-overlay"></div>
-          <h3>DARK TIMES</h3>
-          <p>Shadows. Collapse. Rebirth.</p>
-        </a>
-        
-        <a href="the-other-side.html" class="preview-card other-preview">
-          <div class="preview-overlay"></div>
-          <h3>FRAGMENTS</h3>
-          <p>Unstructured. Raw. Honest.</p>
-        </a>
-        
-        <a href="the-river.html" class="preview-card river-preview">
-          <div class="preview-overlay"></div>
-          <h3>THE RIVER</h3>
-          <p>Music. Visuals. Emotion.</p>
-        </a>
-      </div>
-    </section>
-
-    <footer class="home-footer fade-in delay-4">
-      <p class="footer-quote">"Walking alone at night with headphones on"</p>
-      <div class="social-link">
-        <a href="https://instagram.com/labed_0" target="_blank" rel="noopener">
-          @labed_0
-        </a>
-      </div>
-    </footer>
-
   </main>
 
 </body>
