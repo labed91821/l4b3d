@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="l4b3d — The River">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="l4b3d — The River. Music and visuals flow here.">
   <title>l4b3d // THE RIVER</title>
   
   <link rel="preload" href="assets/gallery/i3.jpg" as="image">
@@ -12,132 +12,138 @@
   
   <link rel="icon" type="image/jpeg" href="assets/gallery/i3.jpg">
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body class="river-page">
   <div class="noise-overlay"></div>
   <div class="background-layer"></div>
   <div class="curtain"></div>
 
-  <aside class="side-panel collapsed">
-    <button class="toggle-btn" aria-label="Toggle navigation">☰</button>
-    <a href="index.html" class="site-title">l4b3d</a>
-    <nav>
+  <aside class="side-panel collapsed" id="sidePanel">
+    <button class="toggle-btn" id="toggleBtn" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="site-title" aria-label="l4b3d home">l4b3d</a>
+    <nav role="navigation">
       <a href="the-story.html">
-        <img src="assets/gallery/icon-story.png" class="nav-icon story-icon" alt="Story">
+        <img src="assets/gallery/icon-story.png" class="nav-icon story-icon" alt="" aria-hidden="true">
         <span class="nav-label">The Story</span>
       </a>
       <a href="dark-times.html">
-        <img src="assets/gallery/icon-dark-times.png" class="nav-icon dark-icon" alt="Dark Times">
+        <img src="assets/gallery/icon-dark-times.png" class="nav-icon dark-icon" alt="" aria-hidden="true">
         <span class="nav-label">Dark Times</span>
       </a>
       <a href="the-other-side.html">
-        <img src="assets/gallery/icon-other-side.png" class="nav-icon other-icon" alt="Other Side">
+        <img src="assets/gallery/icon-other-side.png" class="nav-icon other-icon" alt="" aria-hidden="true">
         <span class="nav-label">The Other Side</span>
       </a>
       <a href="the-river.html">
-        <img src="assets/gallery/icon-river.png" class="nav-icon river-icon" alt="River">
+        <img src="assets/gallery/icon-river.png" class="nav-icon river-icon" alt="" aria-hidden="true">
         <span class="nav-label">The River</span>
       </a>
     </nav>
   </aside>
 
-  <img src="assets/gallery/i3.jpg" class="logo-float" onclick="goHome()" alt="l4b3d logo">
+  <button class="logo-float" onclick="goHome()" aria-label="Return home">
+    <img src="assets/i3.jpg" alt="l4b3d logo">
+  </button>
 
   <main class="content-wrapper river-wrapper">
-    
-    <div class="neon-box cyan fade-in">
-      <h1 class="glitch-text" data-text="THE_RIVER">THE_RIVER</h1>
-      <p class="subtitle-text">"This is where my music lives..."</p>
-    </div>
-
-    <div class="river-intro fade-in delay-1">
-      <p class="river-quote">Sound as memory. Vision as emotion. This is the current that carries everything.</p>
-    </div>
-
-    <section class="audio-section fade-in delay-2">
-      <div class="section-header">
-        <h2 class="section-title">// AUDIO LOGS</h2>
-        <div class="audio-wave"></div>
-      </div>
+    <div class="page-container">
       
-      <div class="track-container">
-        <div class="track-header">
-          <h3 class="track-title">TRACK_66</h3>
-          <p class="track-subtitle">Ce jour où je t'ai rencontrée...</p>
+      <header class="page-header fade-in">
+        <h1 class="glitch-text page-title" data-text="THE_RIVER">THE_RIVER</h1>
+        <p class="subtitle-text">"This is where my music lives..."</p>
+      </header>
+
+      <div class="river-intro fade-in delay-1">
+        <p class="river-quote">Sound as memory. Vision as emotion. This is the current that carries everything.</p>
+      </div>
+
+      <section class="audio-section fade-in delay-2">
+        <div class="section-header">
+          <h2 class="section-title">// AUDIO LOGS</h2>
+          <div class="audio-wave" aria-hidden="true"></div>
         </div>
         
-        <div class="video-wrapper">
-          <video 
-            controls 
-            preload="metadata"
-            class="audio-player"
-            poster="assets/gallery/4.jpg"
-          >
-            <source src="assets/music/66.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <div class="track-meta">
-          <span class="track-year">2025</span>
-          <span class="track-mood">Melancholic / Nostalgic</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="visual-section fade-in delay-3">
-      <div class="section-header">
-        <h2 class="section-title magenta-title">// VISUAL FRAGMENTS</h2>
-      </div>
-      
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <div class="gallery-image-wrapper">
-            <img src="assets/gallery/4.jpg" alt="Visual fragment 1" class="gallery-image" loading="lazy">
-            <div class="gallery-overlay">
-              <div class="gallery-overlay-content">
-                <p class="gallery-caption">T'es la meilleure chose qui m'est arrivée</p>
-              </div>
-            </div>
+        <article class="track-container">
+          <div class="track-header">
+            <h3 class="track-title">TRACK_66</h3>
+            <p class="track-subtitle">Ce jour où je t'ai rencontrée...</p>
           </div>
+          
+          <div class="video-wrapper">
+            <video 
+              controls 
+              preload="metadata"
+              class="audio-player"
+              poster="assets/gallery/4.jpg"
+            >
+              <source src="assets/music/66.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="track-meta">
+            <span class="track-year">2025</span>
+            <span class="track-mood">Melancholic / Nostalgic</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="visual-section fade-in delay-3">
+        <div class="section-header">
+          <h2 class="section-title magenta-title">// VISUAL FRAGMENTS</h2>
         </div>
         
-        <div class="gallery-item">
-          <div class="gallery-image-wrapper">
-            <img src="assets/gallery/54.jpg" alt="Visual fragment 2" class="gallery-image" loading="lazy">
-            <div class="gallery-overlay">
-              <div class="gallery-overlay-content">
-                <p class="gallery-caption">Mais aussi la pire chose qui pouvait arriver</p>
+        <div class="gallery-grid">
+          
+          <article class="gallery-item">
+            <div class="gallery-image-wrapper">
+              <img src="assets/gallery/4.jpg" alt="Visual fragment: Best thing" class="gallery-image" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <p class="gallery-caption">T'es la meilleure chose qui m'est arrivée</p>
+                </div>
               </div>
             </div>
-          </div>
+          </article>
+          
+          <article class="gallery-item">
+            <div class="gallery-image-wrapper">
+              <img src="assets/gallery/54.jpg" alt="Visual fragment: Worst thing" class="gallery-image" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <p class="gallery-caption">Mais aussi la pire chose qui pouvait arriver</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="river-philosophy fade-in delay-4">
-      <div class="philosophy-content">
-        <h3 class="philosophy-title">The river never stops</h3>
-        <p class="philosophy-text">
-          It carries fragments of moments we can never get back. Music frozen in time. Images that hold entire universes.
-        </p>
-        <p class="philosophy-text breathing-text">
-          This is where emotion becomes tangible. Where memory becomes art.
-        </p>
-      </div>
+      <section class="river-philosophy fade-in delay-4">
+        <div class="philosophy-content">
+          <h3 class="philosophy-title">The river never stops</h3>
+          <p class="philosophy-text">
+            It carries fragments of moments we can never get back. Music frozen in time. Images that hold entire universes.
+          </p>
+          <p class="philosophy-text breathing-text">
+            This is where emotion becomes tangible. Where memory becomes art.
+          </p>
+        </div>
+      </section>
+
+      <footer class="page-footer fade-in delay-5">
+        <p class="footer-whisper">Let the current take you where it needs to go.</p>
+        <div class="social-link">
+          <a href="https://instagram.com/labed_0" target="_blank" rel="noopener noreferrer">
+            Float with me → @labed_0
+          </a>
+        </div>
+      </footer>
+
     </div>
-
-    <footer class="page-footer fade-in delay-5">
-      <p class="footer-whisper">Let the current take you where it needs to go.</p>
-      <div class="social-link">
-        <a href="https://instagram.com/labed_0" target="_blank" rel="noopener">
-          Float with me → @labed_0
-        </a>
-      </div>
-    </footer>
-
   </main>
 </body>
 </html>
