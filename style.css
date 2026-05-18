@@ -1,1 +1,4 @@
-body { background: #000; color: #0ff; } .glitch { animation: glitch 1s infinite; } @keyframes glitch {0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(2px,-2px)}}
+/* Restored basic styles */
+body { background: #050505; color: #e0e0e0; }
+.glitch { position: relative; }
+.glitch::before { content: attr(data-text); position: absolute; top: 0; left: 0; color: #ff003c; animation: glitch-1 0.5s infinite; }

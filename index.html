@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>l4b3d</title>
+  <title>l4b3d // ENTER THE RIVER</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
-    body { background: #000; color: #0ff; font-family: monospace; text-align: center; padding: 50px; }
+    body { background: #050505; color: #00f0ff; font-family: 'Share Tech Mono', monospace; text-align: center; padding: 5rem 2rem; }
     .glitch { animation: glitch 1s infinite; }
-    @keyframes glitch { 0% { transform: translate(0); } 20% { transform: translate(-2px, 2px); } 40% { transform: translate(2px, -2px); } 100% { transform: translate(0); } }
+    @keyframes glitch { 0% { transform: translate(0); } 20% { transform: translate(-2px,2px); } 40% { transform: translate(2px,-2px); } 100% { transform: translate(0); } }
+    .hero { font-size: 4rem; margin-bottom: 2rem; }
   </style>
 </head>
 <body>
-  <h1 class="glitch">l4b3d</h1>
-  <p>Restoring your neon sanctuary...</p>
-  <p style="margin-top: 40px; color: #ff00ff;">The Archive is loading with your Spotify Wrapped data.</p>
+  <div class="hero glitch" data-text="l4b3d">l4b3d</div>
+  <p style="font-size:1.5rem; color:#ff003c;">ENTER THE RIVER</p>
+  <p style="margin-top:3rem; opacity:0.7;">The site is now restored.</p>
+  <p><a href="the-archive.html" style="color:#00f0ff;">Go to The Archive</a></p>
+  <nav style="margin-top:4rem;">
+    <a href="the-story.html" style="margin:0 1rem; color:#ddd;">The Story</a>
+    <a href="dark-times.html" style="margin:0 1rem; color:#ddd;">Dark Times</a>
+    <a href="the-other-side.html" style="margin:0 1rem; color:#ddd;">The Other Side</a>
+    <a href="the-river.html" style="margin:0 1rem; color:#ddd;">The River</a>
+    <a href="the-archive.html" style="margin:0 1rem; color:#ddd;">The Archive</a>
+  </nav>
 </body>
 </html>
