@@ -1,1 +1,1 @@
-body { background:#050505; color:#ddd; font-family:'Share Tech Mono', monospace; margin:0; }
+body { background: #000; color: #0ff; } .glitch { animation: glitch 1s infinite; } @keyframes glitch {0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(2px,-2px)}}
